@@ -1,0 +1,152 @@
+.container{
+  margin: 0 auto; 
+    padding: 20px;
+}
+
+.navbar{
+  padding-bottom: 20px;
+
+}
+.navbar:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 5px; 
+  background: linear-gradient(to right, #520200 25%, #FF0700 25%, #FF0700 50%, #4AB8A4 50%, #4AB8A4 75%, #246358 75%); 
+}
+
+
+.logo{
+  width: 150px;
+}
+
+
+
+.btn{
+  color: white;
+  background-color: #4AB8A4;
+  align-content: center;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  height: 35px;
+  width: 90px;
+  margin-bottom: 7px;
+}
+
+.btn:hover{
+  background-color: #FF0700;
+}
+
+.header{
+  display: flex;
+  gap: 10px;
+
+}
+
+
+.don{
+  text-align: center;
+  align-content: center;
+  font-size: 1.7rem;
+  width: 50%;
+  border-radius: 0px 18px 0px 18px;
+  height: 80px;
+  background-color: #CAD0D7;
+}
+
+
+.location{
+  text-align: center;
+  align-content: center;
+  font-size: 1.7rem;
+  width: 50%;
+  border-radius: 0px 18px 0px 18px;
+  height: 80px;
+  border: 2px solid #FF0700;
+  color: #FF0700;
+}
+
+
+.body {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%; 
+  padding-top: 10px;
+  
+}
+
+
+
+.body-img{
+max-width: 100%;
+max-height: 350px;
+ border-radius: 10px 10px 0px 0px;
+}
+.body > div {
+  text-align: center; 
+  width: 25%; 
+}
+.h-body{
+  background-color: #FF0700;
+  color: white;
+  font-size: 1.25rem;
+  height: 60px;
+  border-radius: 0px 0px 10px 10px ;
+  text-align: center;
+  align-content: center;
+}
+.h-body-b{
+  background-color: #4AB8A4;
+  color: white;
+  font-size: 1.25rem;
+  height: 60px;
+  border-radius: 0px 0px 10px 10px ;
+  text-align: center;
+  align-content: center;
+}
+.c {
+  position: relative;
+}
+
+.c .body-img,
+.c .h-body {
+  visibility: visible; 
+}
+
+.c .information {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 7, 0, 0.8); 
+  color: rgb(255, 255, 255); 
+  padding: 10px;
+  visibility: hidden; 
+  transition: top 0.3s ease-out, visibility 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.c:hover .body-img,
+.c:hover .h-body {
+  visibility: hidden; 
+}
+
+.c:hover .information {
+  top: 0; 
+  visibility: visible; 
+}
+
+.body {
+  display: flex;
+  justify-content: space-between; 
+}
+
+.c {
+  flex: 1; 
+}
+p{
+  font-size: 1.1rem;
+}
+

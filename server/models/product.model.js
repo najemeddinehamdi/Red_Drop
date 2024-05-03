@@ -14,9 +14,9 @@ const productschema = new mongoose.Schema({
     image:{
         type:String,
     },
-    idSponsor:{
-        required: true
-    }
+    // idSponsor:{
+    //     required: [true,"{PATH} is required"],
+    // }
 },{timestamps: true});
 
 module.exports.product= mongoose.model("product", productschema)

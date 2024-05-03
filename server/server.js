@@ -10,7 +10,8 @@ require("dotenv").config()
 require("./config/mongoose.config")
 const PORT = process.env.PORT
 
-require("./routes/routes")(app);
+require("./routes/user.route")(app);
+require("./routes/product.route")(app);
 
 app.listen(PORT, () => {
     console.log(`Connecting to our server with success to this PORT : ${PORT}  🌴🌴🌴🌴`)

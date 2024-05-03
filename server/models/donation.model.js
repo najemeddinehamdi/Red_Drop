@@ -6,7 +6,7 @@ const donationschema = new mongoose.Schema({
     },
     donationDate:{
         type: Date,
-        required: true ,
+        required: [true,"{PATH} is required"],
     }
 },{timestamps: true});
 
