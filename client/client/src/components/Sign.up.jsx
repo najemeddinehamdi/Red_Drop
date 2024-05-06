@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../css/login.css";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Sign = ({ onClose }) => {
     const nav = useNavigate();
@@ -43,7 +43,7 @@ const Sign = ({ onClose }) => {
             .then((res) => {
                 console.log(res.data.user);
                 setRegister(res.data.user);
-                nav("/");
+                nav("/user");
                 onClose();
             })
             .catch((err) =>
@@ -119,7 +119,7 @@ const Sign = ({ onClose }) => {
                             onChange={handleRegisteronChange}
                             value={register.points}
                         />
-                        <button type="submit">Sign Up</button>
+                        <button type="submit" className="btn-s">Sign Up</button>
                     </form>
                     {/* *********************************************************************** */}
                 </div>
