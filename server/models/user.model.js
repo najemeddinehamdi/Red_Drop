@@ -54,7 +54,7 @@ const userschema = new mongoose.Schema({
             required: [true,"{PATH} is required"],
             minlength:[3, "{PATH} must have at least 3"]
         },
-    }
+    },
     rewardsPoints:{
         type:Number,
     },

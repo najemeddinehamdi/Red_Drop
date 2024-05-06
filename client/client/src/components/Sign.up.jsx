@@ -3,8 +3,9 @@ import "../css/login.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const Sign = () => {
-    
+const Sign = ({ onClose }) => {
+    const nav = useNavigate();
+
     const [register, setRegister] = useState({
         firstName: "",
         lastName: "",
@@ -23,7 +24,7 @@ const Sign = () => {
             password: "",
             confirmPassword: "",
         },
-        
+
     });
 
     const handleRegisteronChange = (e) => {
@@ -34,7 +35,7 @@ const Sign = () => {
         });
     };
 
-    
+
     const registerHandler = (e) => {
         e.preventDefault();
         axios
@@ -42,6 +43,8 @@ const Sign = () => {
             .then((res) => {
                 console.log(res.data.user);
                 setRegister(res.data.user);
+                nav("/");
+                onClose();
             })
             .catch((err) =>
                 setErrors({
@@ -51,13 +54,16 @@ const Sign = () => {
             );
     };
 
-   
+
 
     return (
-        <div className="sign-up-container">
-            <form className="sign-up-form" onSubmit={registerHandler}>
-                <h2>Sign Up</h2>
-                {/* {errors.register
+        <div className="modal">
+            <div className="modal-content">
+                <div className="sign-up-container">
+                    <span className="close" onClick={onClose}>&times;</span>
+                    <form className="sign-up-form" onSubmit={registerHandler}>
+                        <h2>Sign Up</h2>
+                        {errors.register
                     ? Object.entries(errors.register).map(([key, value], index) =>
                         value ? (
                             <p style={{ color: "red" }} key={index}>
@@ -65,58 +71,60 @@ const Sign = () => {
                             </p>
                         ) : null
                     )
-                    : null} */}
-                <label htmlFor="firstName">First Name:</label>
-                <input
-                    name="firstName"
-                    type="text"
-                    placeholder="First Name"
-                    onChange={handleRegisteronChange}
-                    value={register.firstName}
-                />
-                <label htmlFor="lastName">Last Name:</label>
-                <input
-                    name="lastName"
-                    type="text"
-                    placeholder="Last Name"
-                    onChange={handleRegisteronChange}
-                    value={register.lastName}
-                />
-                <label htmlFor="email">Email:</label>
-                <input
-                    name="email"
-                    type="email"
-                    autoComplete="off"
-                    placeholder="Email"
-                    onChange={handleRegisteronChange}
-                    value={register.email}
-                />
-                <label htmlFor="password">Password:</label>
-                <input
-                    name="password"
-                    type="password"
-                    placeholder="********"
-                    onChange={handleRegisteronChange}
-                    value={register.password}
-                />
-                <label htmlFor="confirmPassword">Confirm Password:</label>
-                <input
-                    name="confirmPassword"
-                    type="password"
-                    placeholder="********"
-                    onChange={handleRegisteronChange}
-                    value={register.confirmPassword}
-                />
-                 <input
-                    name="points"
-                    type="hidden"
-                    onChange={handleRegisteronChange}
-                    value={register.points}
-                />
-                <button type="submit">Sign Up</button>
-            </form>
-            {/* *********************************************************************** */}
-            
+                    : null}
+                        <label htmlFor="firstName">First Name:</label>
+                        <input
+                            name="firstName"
+                            type="text"
+                            placeholder="First Name"
+                            onChange={handleRegisteronChange}
+                            value={register.firstName}
+                        />
+                        <label htmlFor="lastName">Last Name:</label>
+                        <input
+                            name="lastName"
+                            type="text"
+                            placeholder="Last Name"
+                            onChange={handleRegisteronChange}
+                            value={register.lastName}
+                        />
+                        <label htmlFor="email">Email:</label>
+                        <input
+                            name="email"
+                            type="email"
+                            autoComplete="off"
+                            placeholder="Email"
+                            onChange={handleRegisteronChange}
+                            value={register.email}
+                        />
+                        <label htmlFor="password">Password:</label>
+                        <input
+                            name="password"
+                            type="password"
+                            placeholder="********"
+                            onChange={handleRegisteronChange}
+                            value={register.password}
+                        />
+                        <label htmlFor="confirmPassword">Confirm Password:</label>
+                        <input
+                            name="confirmPassword"
+                            type="password"
+                            placeholder="********"
+                            onChange={handleRegisteronChange}
+                            value={register.confirmPassword}
+                        />
+                        <input
+                            name="points"
+                            type="hidden"
+                            onChange={handleRegisteronChange}
+                            value={register.points}
+                        />
+                        <button type="submit">Sign Up</button>
+                    </form>
+                    {/* *********************************************************************** */}
+                </div>
+
+            </div>
         </div>
     );
 };
