@@ -565,10 +565,10 @@
   .word-b{
     word-break: break-word;
   }
-  .table {
+  .table-a {
     display: flex;
     justify-content: space-between;
-    
+    background-color: hsla(0, 4%, 90%, 0.486);
     
 
     
@@ -576,7 +576,7 @@
   .user{
     width: 106px ;
     height: 110px;
-
+    
     
   }
 
@@ -601,3 +601,16 @@
     
   }
 
+.element{
+  padding: 17px;
+}
+.element-item{
+  padding : 33px
+}
+.details-user {
+  padding: 24px 30px;
+  
+}
+.blood-details{
+  align-items: ;
+}
