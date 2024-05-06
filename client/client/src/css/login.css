@@ -1,17 +1,6 @@
-.sign-up-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
+/* login.css */
 
-.sign-up-form {
-    width: 300px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 0 10px #4ab8a4b1;
-}
+
 
 label {
     display: block;
@@ -28,9 +17,17 @@ input {
 button {
     width: 100%;
     padding: 10px;
-    background-color: #4AB8A4;
+    background-color: #4ab8a4;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+button:hover{
+    background-color: #ff0700;
+}
+.sign-up-container.hovered {
+    box-shadow: 0 0 10px #ff0700;
 }
