@@ -9,7 +9,7 @@ module.exports = (app) => {
         app.post("/api/logout", UserController.logout);
 
         //?==========Read ALL==========
-        app.get("/api/signup", UserController.AllUsers);
+        app.get("/api/allUser", UserController.AllUsers);
         //   //?==========Read One Single User==========
         app.get("/api/signup/:id", UserController.findOneSingleUser);
 

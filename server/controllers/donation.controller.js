@@ -34,17 +34,17 @@ module.exports = {
     },
     //?==========Update==========
     updateExistingDonation: (req, res) => {
-        Donation.findDonationUpdate({ _id: req.params.id }, req.body, { new: true, runValidators: true })
+        Donation.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true, runValidators: true })
             .then(updatedDonation => {
                 res.status(200).json(updatedDonation);
             })
             .catch((err) => {
                 res.status(400).json(err);
             });
-        },
+    },
     //? =========== DELETE ==========
     deleteDonation: (req, res) => {
-        Donation.deleteOneDonation({ _id: req.params.id })
+        Donation.deleteOne({ _id: req.params.id })
             .then(result => {
                 res.status(200).json(result);
             })

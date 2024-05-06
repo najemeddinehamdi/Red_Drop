@@ -34,7 +34,7 @@ module.exports = {
     },
     //?==========Update==========
     updateExistingSponsor : (req, res) => {
-        Sponsor.findSponsorUpdate({ _id: req.params.id }, req.body, { new: true, runValidators: true })
+        Sponsor.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true })
             .then(updatedSponsor => {
                 res.status(200).json(updatedSponsor);
             })
@@ -44,7 +44,7 @@ module.exports = {
     },
     //? =========== DELETE ==========
     deleteSponsor : (req, res) => {
-        Sponsor.deleteOneSponsor({ _id: req.params.id })
+        Sponsor.deleteOne({ _id: req.params.id })
             .then(result => {
                 res.json(result);
             })

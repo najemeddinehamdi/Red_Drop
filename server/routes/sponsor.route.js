@@ -8,7 +8,7 @@ module.exports = (app) => {
     //? =========== CREATE ==========
     app.post('/api/sponsor', sponsorControllers.CreateSponsor);
     //? =========== UPDATE ==========
-    app.put('/api/sponsor/:id', sponsorControllers.updateExistingSponsor);
+    app.patch('/api/sponsor/:id', sponsorControllers.updateExistingSponsor);
     //? =========== DELETE ==========
     app.delete('/api/sponsor/:id', sponsorControllers.deleteSponsor);
 }

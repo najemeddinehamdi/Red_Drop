@@ -42,7 +42,7 @@ module.exports = {
 
     //?==========Update==========
     updateExistingProduct : (req, res) => {
-        Product.findProductUpdate({ _id: req.params.id }, req.body, { new: true, runValidators: true })
+        Product.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true })
             .then(updatedProduct => {
                 res.status(200).json(updatedProduct);
             })
@@ -53,7 +53,7 @@ module.exports = {
 
     //? =========== DELETE ==========
     deleteProduct : (req, res) => {
-        Notes.deleteOneProduct({ _id: req.params.id })
+        Product.deleteOne({ _id: req.params.id })
             .then(result => {
                 res.status(200).json(result);
             })

@@ -16,8 +16,9 @@ const ProductsSchema = new mongoose.Schema({
     },
     idSponsor:{
         type:mongoose.Schema.Types.ObjectId,
-        ref: 'user'
+        ref: 'sponsor'
     },
 },{timestamps: true});
 
-module.exports.product= mongoose.model("product", ProductsSchema)
+const Product = mongoose.model("product", ProductsSchema);
+module.exports = Product;
