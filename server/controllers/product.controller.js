@@ -5,9 +5,6 @@ const Product =require("../models/product.model")
 
 module.exports = {
 
-
-
-
     //?==========Create==========
     CreateProduct : (req, res) => {
         Product.create(req.body)
@@ -45,13 +42,24 @@ module.exports = {
 
     //?==========Update==========
     updateExistingProduct : (req, res) => {
-        Notes.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true, runValidators: true })
-            .then(updatedNotes => {
-                res.status(200).json(updatedNotes);
+        Product.findProductUpdate({ _id: req.params.id }, req.body, { new: true, runValidators: true })
+            .then(updatedProduct => {
+                res.status(200).json(updatedProduct);
             })
             .catch((err) => {
                 res.status(400).json(err);
             });
     },
+
+    //? =========== DELETE ==========
+    deleteProduct : (req, res) => {
+        Notes.deleteOneProduct({ _id: req.params.id })
+            .then(result => {
+                res.status(200).json(result);
+            })
+            .catch((err) => {
+                res.status(400).json(err);
+            });
+    }
 
 }

@@ -12,6 +12,8 @@ const PORT = process.env.PORT
 
 require("./routes/user.route")(app);
 require("./routes/product.route")(app);
+require("./routes/sponsor.route")(app);
+require("./routes/donation.route")(app);
 
 app.listen(PORT, () => {
     console.log(`Connecting to our server with success to this PORT : ${PORT}  🌴🌴🌴🌴`)

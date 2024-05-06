@@ -48,6 +48,8 @@ module.exports = {
             })
             .catch((err) => res.status(400).json(err.errors));
     },
+
+    
     logout: (req, res) => {
         res.clearCookie("userToken");
         res.json({ message: "You are logged out" });
