@@ -1,5 +1,5 @@
 const mongoose =require('mongoose')
-const productschema = new mongoose.Schema({
+const ProductsSchema = new mongoose.Schema({
     productName:{
         type:String,
         required: [true,"{PATH} is required"],
@@ -14,9 +14,10 @@ const productschema = new mongoose.Schema({
     image:{
         type:String,
     },
-    // idSponsor:{
-    //     required: [true,"{PATH} is required"],
-    // }
+    idSponsor:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref: 'user'
+    },
 },{timestamps: true});
 
-module.exports.product= mongoose.model("product", productschema)
+module.exports.product= mongoose.model("product", ProductsSchema)

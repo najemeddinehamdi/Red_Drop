@@ -1,5 +1,7 @@
 const mongoose =require('mongoose')
-const userschema = new mongoose.Schema({
+
+
+const UserSchema = new mongoose.Schema({
     firstName:{
         type:String,
         required: [true,"{PATH} is required"],
@@ -12,17 +14,17 @@ const userschema = new mongoose.Schema({
     },
     phoneNumber:{
         type:Number,
-        required: [true,"{PATH} is required"],
+        required: [false,"{PATH} is required"],
         minlength:[8, "{PATH} must have at least 8"]
     },
     Occupation:{
         type:String,
-        required: [true,"{PATH} is required"],
+        required: [false,"{PATH} is required"],
         minlength:[3, "{PATH} must have at least 3"]
     },
     Status:{
         type:String,
-        required: [true,"{PATH} is required"],
+        required: [false,"{PATH} is required"],
         minlength:[3, "{PATH} must have at least 3"]
     },
     email:{
@@ -36,22 +38,22 @@ const userschema = new mongoose.Schema({
     contactInfo:{
         country :{
             type:String,
-            required: [true,"{PATH} is required"],
+            required: [false,"{PATH} is required"],
             minlength:[3, "{PATH} must have at least 3"]
         },
         department:{
             type:String,
-            required: [true,"{PATH} is required"],
+            required: [false,"{PATH} is required"],
             minlength:[3, "{PATH} must have at least 3"]
         },
         city:{
             type:String,
-            required: [true,"{PATH} is required"],
+            required: [false,"{PATH} is required"],
             minlength:[3, "{PATH} must have at least 3"]
         },
         address:{
             type:String,
-            required: [true,"{PATH} is required"],
+            required: [false,"{PATH} is required"],
             minlength:[3, "{PATH} must have at least 3"]
         },
     }
@@ -61,6 +63,10 @@ const userschema = new mongoose.Schema({
     nbrDonation:{
         type:Number,
     },
+    isAdmin:{
+        type:Boolean,
+        default:false
+    }
 },{timestamps: true});
 
-module.exports= mongoose.model("User", userschema)
+module.exports= mongoose.model("User", UserSchema)

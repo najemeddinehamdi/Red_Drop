@@ -54,11 +54,11 @@ module.exports = {
     },
 
     //?==========Read ALL==========
-    Allusers: (req, res) => {
+    AllUsers: (req, res) => {
         User.find()
-            .then((Allusers) => {
-                console.log(Allusers);
-                res.status(200).json(Allusers);
+            .then((AllUsers) => {
+                console.log(AllUsers);
+                res.status(200).json(AllUsers);
             })
             .catch((err) => {
                 res.status(400).json(err);

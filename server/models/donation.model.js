@@ -1,5 +1,8 @@
 const mongoose =require('mongoose')
-const donationschema = new mongoose.Schema({
+
+
+
+const DonationSchema = new mongoose.Schema({
     bloodType:{
         type:String,
         required: [true,"{PATH} is required"],
@@ -7,7 +10,23 @@ const donationschema = new mongoose.Schema({
     donationDate:{
         type: Date,
         required: [true,"{PATH} is required"],
-    }
+    },
+    BleedingTime:{
+        type: Date,
+        required: [true,"{PATH} is required"],
+    },
+    collectionVolume:{
+        type:Number,
+        required: [true,"{PATH} is required"],
+    },
+    hemoglobinLevel:{
+        type:Number,
+        required: [true,"{PATH} is required"],
+    },
+    idUser:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref: 'user'
+    },
 },{timestamps: true});
 
-module.exports.donation= mongoose.model("donation", donationschema)
+module.exports.donation= mongoose.model("donation", DonationSchema)
