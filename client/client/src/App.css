@@ -568,8 +568,9 @@
   .table-a {
     display: flex;
     justify-content: space-between;
-    background-color: hsla(0, 4%, 90%, 0.486);
-    
+    background-color: hsla(171, 48%, 78%, 0.349);
+    border-radius: 20px;
+    padding: 30px;
 
     
   }
@@ -580,10 +581,7 @@
     
   }
 
-  .user-name{
-    
-    
-  }
+
 
   .details{
     text-align: center;
@@ -592,25 +590,29 @@
 
   .about-y{
     text-align: center;
+    background-color: white;
+    border-radius: 20px;
     
 
   }
   .contact-info{
     text-align: center;
+    background-color: white;
+    border-radius: 20px;
     
     
   }
 
 .element{
-  padding: 17px;
+  padding: 18px;
 }
 .element-item{
   padding : 33px
 }
 .details-user {
-  padding: 24px 30px;
+  padding: 24px 41px;
   
 }
-.blood-details{
-  align-items: ;
+.user-name{
+  text-align: center;
 }
