@@ -1,4 +1,4 @@
-const mongoose =require('mongoose')
+const mongoose = require('mongoose')
 
 
 
@@ -12,7 +12,7 @@ const DonationSchema = new mongoose.Schema({
         required: [true,"{PATH} is required"],
     },
     BleedingTime:{
-        type: Date,
+        type: Number,
         required: [true,"{PATH} is required"],
     },
     collectionVolume:{
@@ -29,4 +29,5 @@ const DonationSchema = new mongoose.Schema({
     },
 },{timestamps: true});
 
-module.exports.donation= mongoose.model("donation", DonationSchema)
+const Donation = mongoose.model('Donation',DonationSchema);
+module.exports = Donation;

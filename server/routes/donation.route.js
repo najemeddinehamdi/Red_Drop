@@ -8,7 +8,7 @@ module.exports = (app) => {
     //? =========== CREATE ==========
     app.post('/api/donation', donationController.CreateDonation);
     //? =========== UPDATE ==========
-    app.put('/api/donation/:id', donationController.updateExistingDonation);
+    app.patch('/api/donation/:id', donationController.updateExistingDonation);
     //? =========== DELETE ==========
     app.delete('/api/donation/:id', donationController.deleteDonation);
 }
