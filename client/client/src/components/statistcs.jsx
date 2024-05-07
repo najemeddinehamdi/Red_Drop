@@ -20,7 +20,7 @@ export const Statistcs = () => {
                 <div className='text'><h2>Reward Points  </h2></div>
             </div>
             <div>
-                <div className='table-s'>
+                <div className='table-a'>
                     <div className='items'>
                         <div className='Acc-manage'><img src="ManageAc.png" alt="" className='manage' /><h4>Manage Account</h4></div>
                         <div className='Acc-manage'><img src="statistics.jpg" alt="" className='manage' /><h4>Statistics</h4></div>
@@ -44,7 +44,7 @@ export const Statistcs = () => {
                                 </tbody>
                             </table>
                         </div>
-                        <div className='stat'>
+                        <div className='s'>
                             <img className='stat' src="stat1.png" alt="" />
                             <img className='stat' src="stat2.png" alt="" />
                         </div>

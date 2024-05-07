@@ -604,9 +604,27 @@
 
   .stat{
     width: 300px;
-    height: 150px;
+    height: 140px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+     
+  }
+  .history{
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
   }
 
   .statistcs{
     display: flex;
+    flex-direction:row;
+    padding: 10px;
+    text-align: center;
+  }
+  .s{
+    max-width: 100%;
+    max-height: 100%;
   }
