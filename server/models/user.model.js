@@ -66,6 +66,10 @@ const UserSchema = new mongoose.Schema({
     isAdmin:{
         type:Boolean,
         default:false
+    },
+    bloodGroup:{
+        type:String,
+        required: [false,"{PATH} is required"],
     }
 },{timestamps: true});
 
