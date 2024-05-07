@@ -9,7 +9,7 @@ module.exports = (app) => {
         app.post("/api/logout", UserController.logout);
 
         //?==========Read ALL==========
-        app.get("/api/alluser", UserController.Allusers);
+        app.get("/api/signup", UserController.Allusers);
 
         //   //?==========Getting Data from a URL //  Read One  ==========
         // if we want to get a user with a specific id, we can make the id a part of the url

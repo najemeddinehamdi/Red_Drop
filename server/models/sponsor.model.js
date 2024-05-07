@@ -7,4 +7,5 @@ const SponsorSchema = new mongoose.Schema({
     },
 },{timestamps: true});
 
-module.exports.sponsor= mongoose.model("sponsor", SponsorSchema)
+const Sponsor = mongoose.model('Sponsor',SponsorSchema);
+module.exports = Sponsor;
