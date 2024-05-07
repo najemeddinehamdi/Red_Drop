@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Sign from "./Sign.up";
 
 
 const Up = ({ onClose }) => {
@@ -10,7 +11,7 @@ const Up = ({ onClose }) => {
         password: "",
     });
     const [errors, setErrors] = useState("");
-    
+
     const handleLoginOnChange = (e) => {
         setLogin({
             ...login,
@@ -25,22 +26,30 @@ const Up = ({ onClose }) => {
             .then((res) => {
                 console.log("Cookie", document.cookie);
                 console.log("Data", res.data);
-                nav("/");
-                onClose(); // Close the modal after successful login
+                nav("/user");
             })
-            .catch((err) => {
-                console.error("Login Error:", err.response);
-                setErrors("Invalid email or password. Please try again.");
-            });
+            .catch((err) =>
+                setErrors({
+                    ...errors,
+                    login: err.response.data,
+                })
+            );
     };
-
     return (
         <div className="modal">
             <div className="modal-content">
                 <span className="close" onClick={onClose}>&times;</span>
                 <form className="sign-up-form" onSubmit={loginHandler}>
-                    {errors && <p className="error-message">{errors}</p>}
-                    <label htmlFor="email">Email:</label>
+                    {errors.login
+                        ? Object.entries(errors.login).map(([key, value], index) =>
+                            value ? (
+                                <p style={{ color: "red" }} key={index}>
+                                    {typeof value === "object" ? value.message : value}
+                                </p>
+                            ) : null
+                        )
+                        : null}                    
+                        <label htmlFor="email">Email:</label>
                     <input
                         name="email"
                         type="email"
@@ -60,9 +69,9 @@ const Up = ({ onClose }) => {
                     <button type="submit">Login</button>
                 </form>
             </div>
-            
+
         </div>
-        
+
     );
 };
 

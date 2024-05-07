@@ -2,7 +2,7 @@ const User = require("../models/user.model");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
-const { secret } = require("../config/Jwt.config");
+const { secret } = require("../config/jwt.config");
 // const { isValidObjectId } = require("mongoose");
 
 module.exports = {
@@ -54,11 +54,11 @@ module.exports = {
     },
 
     //?==========Read ALL==========
-    AllUsers: (req, res) => {
+    Allusers: (req, res) => {
         User.find()
-            .then((AllUsers) => {
-                console.log(AllUsers);
-                res.status(200).json(AllUsers);
+            .then((Allusers) => {
+                console.log(Allusers);
+                res.status(200).json(Allusers);
             })
             .catch((err) => {
                 res.status(400).json(err);

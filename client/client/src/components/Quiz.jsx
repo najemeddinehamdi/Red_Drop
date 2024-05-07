@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import Modal from './Modal';
 import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const Quiz = () => {
+    const nav = useNavigate();
     const [age, setAge] = useState('');
     const [weight, setWeight] = useState('');
     const [healthConditions, setHealthConditions] = useState(false);
@@ -16,7 +18,7 @@ const Quiz = () => {
 
         if (age && weight && !healthConditions && !recentSurgery && !medication && !travelHistory) {
             console.log("You are eligible to donate blood!");
-
+            nav("/user")
         } else {
             setShowModal(true);
         }

@@ -282,6 +282,7 @@ iframe{
   font-family:'Roboto', sans-serif;
   font-size: 1rem;
   color: #000000;
+  padding-top: 20px;
 }
 .search-map{
   border-radius: 10px;
@@ -290,7 +291,7 @@ iframe{
 .map{
   display: flex;
   height: 100%;
-  padding: 20px;
+  padding: 25px 15px 0px 10px;
   max-height: 150vh;
   min-height: 150vh;
   
@@ -520,7 +521,7 @@ p {
 .map-p{
   display: flex;
   flex-wrap: wrap;
-
+  padding-bottom: 50px;
 }
 .loader {
     display: flex;
