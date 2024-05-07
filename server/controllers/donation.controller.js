@@ -2,15 +2,15 @@ const Donation = require('../models/donation.model');
 
 module.exports = {
     //?==========Create==========
-    CreateDonation: (req, res) => {
-        Donation.create(req.body)
-            .then((CreatedDonation) => {
-                console.log(CreatedDonation)
-                res.status(200).json(CreatedDonation)
-            }).catch((err) => {
-                res.status(400).json(err)
-            })
-    },
+    // CreateDonation: (req, res) => {
+    //     Donation.create(req.body)
+    //         .then((CreatedDonation) => {
+    //             console.log(CreatedDonation)
+    //             res.status(200).json(CreatedDonation)
+    //         }).catch((err) => {
+    //             res.status(400).json(err)
+    //         })
+    // },
     //?==========Read ALL==========
     AllDonation: (req, res) => {
         Donation.find()
@@ -51,6 +51,37 @@ module.exports = {
             .catch((err) => {
                 res.status(400).json(err);
             });
+    },
+
+    //? Get all donations by user id
+    AllDonationByUserId: (req, res) => {
+        Donation.find({ idUser: req.params.id })
+            .then((AllDonation) => {
+                console.log(AllDonation);
+                res.status(200).json(AllDonation);
+            })
+            .catch((err) => {
+                res.status(400).json(err);
+            });
+    },
+
+    // add donation with user id and add user id to req.body
+    addDonation: (req, res) => {
+        req.body.idUser = req.params.id;
+        Donation.create(req.body)
+            .then((CreatedDonation) => {
+            console.log(CreatedDonation)
+            res.status(200).json(CreatedDonation)
+            }).catch((err) => {
+            res.status(400).json(err)
+            })
     }
+
+
+
+
+    
+
+
 }
 
