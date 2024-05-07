@@ -7,6 +7,7 @@ import Up from './components/SignIn';
 import Map from './components/Map';
 import Quiz from './components/Quiz';
 import User from './components/User';
+import Statistcs from './components/statistcs';
 
 
 
@@ -21,6 +22,7 @@ function App() {
       <Route path="/map" element={<Map />} />
       <Route path="/quiz" element={<Quiz />} />
       <Route path="/user" element={<User />} />
+      <Route path="/s" element={<Statistcs />} />
       </Routes>
     </div>
   );
