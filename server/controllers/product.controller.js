@@ -60,6 +60,29 @@ module.exports = {
             .catch((err) => {
                 res.status(400).json(err);
             });
-    }
+    },
 
+//? get all products with sponsor id
+    AllSponsorProduct: (req, res) => {
+        Product.find({sponsorId:req.params.id})
+            .then((AllProduct) => {
+                console.log(AllProduct);
+                res.status(200).json(AllProduct);
+            })
+            .catch((err) => {
+                res.status(400).json(err);
+            });
+    },
+
+// add product with user id and add user id to req.body
+        addProduct: (req, res) => {
+            req.body.sponsorId = req.params.id;
+            Product.create(req.body)
+                .then((CreatedProduct) => {
+                        console.log(CreatedProduct)
+                    res.status(200).json(CreatedProduct)
+                }).catch((err) => {
+                    res.status(400).json(err)
+                })
+        }
 }

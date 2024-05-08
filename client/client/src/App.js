@@ -9,6 +9,8 @@ import Quiz from './components/Quiz';
 import User from './components/User';
 import Statistcs from './components/statistcs';
 import AdminDashboard from './components/Admin/AdminDashboard';
+import OneUser from './components/Admin/OneUser';
+import Sponsor from './components/Admin/Sponsor';
 
 
 
@@ -25,6 +27,8 @@ function App() {
       <Route path="/user" element={<User />} />
       <Route path="/s" element={<Statistcs />} />
       <Route path="/admin" element={<AdminDashboard />} />
+      <Route path="/admin/user/:id" element={<OneUser />} />
+      <Route path="/admin/sponsor" element={<Sponsor />} />
       
       </Routes>
     </div>

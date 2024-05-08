@@ -8,7 +8,7 @@ function AllUsers() {
 
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/allUser')
+        axios.get('http://localhost:8000/api/signup')
             .then(res => {
                 console.log(res);
                 setUsers(res.data)
@@ -19,7 +19,7 @@ function AllUsers() {
     }, [])
 
     const deleteUser = (id)=>{
-        axios.delete(`http://localhost:8000/api/countries/delete/${id}`)
+        axios.delete(`http://localhost:8000/api/signup/${id}`)
         .then(res=>{
             setUsers(users.filter(c=>c._id !== id))
         })

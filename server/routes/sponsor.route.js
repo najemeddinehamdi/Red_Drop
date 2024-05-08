@@ -11,4 +11,5 @@ module.exports = (app) => {
     app.patch('/api/sponsor/:id', sponsorControllers.updateExistingSponsor);
     //? =========== DELETE ==========
     app.delete('/api/sponsor/:id', sponsorControllers.deleteSponsor);
+
 }

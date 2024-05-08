@@ -1,0 +1,20 @@
+.userInfo{
+    border: 2px solid #4ab8a4;
+    border-radius: 10px;
+}
+
+p::before{
+    content: "•";
+}
+
+.text-center{
+    padding-left:115px;
+}
+
+.ContactInfo{
+    font-weight: 900;
+}
+
+h3{
+    font-weight: bold;
+}

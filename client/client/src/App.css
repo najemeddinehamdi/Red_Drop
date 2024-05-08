@@ -147,9 +147,7 @@ max-height: 350px;
   flex: 1; 
 }
 p{
-<<<<<<< Updated upstream
   font-size: 1.1rem;
-=======
   font-size: 1.4rem;
   font-family: 'Roboto', sans-serif; 
   margin-bottom: 10px;
@@ -433,6 +431,5 @@ button:hover {
 @keyframes icon-spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
->>>>>>> Stashed changes
 }
 

@@ -28,19 +28,20 @@ const OneUserInfo = () => {
 
 
     return (
-        <div className='d-flex'>
-            <div className="col-6">
-                <div className='d-flex gap-5 justify-content-evenly '>
+        <div className='container'>
+            <div>
+                <div className='container d-flex gap-5  '>
                     <div>
                         <h3>First Name:</h3>
                         <p>{users?.firstName}</p>
                         <h3>Last Name: </h3>
                         <p>{users?.lastName}</p>
                         <h3>Email: </h3>
-                        {users?.email}
+                        <p>{users?.email}</p>
                         <h3>Phone: </h3>
                         <p>{users?.phone}</p>
-
+                        <h3>Occupation: </h3>
+                        <p>{users?.occupation}</p>
                     </div>
                     <div>
                         <h3>nbrDonation: </h3>
@@ -51,21 +52,22 @@ const OneUserInfo = () => {
                         <p>{users?.rewardsPoints}</p>
                         <h3>Status: </h3>
                         <p>{users?.status}</p>
-                        <h3>Occupation: </h3>
-                        <p>{users?.occupation}</p>
                     </div>
                 </div>
-                <hr />
-                <h2>Contact Info</h2>
-                <div>
-                <h3>Country: </h3>
+                <h2 className='ContactInfo'>Contact Info</h2>
+                <div className='d-flex gap-5'>
+                    <div className='container '>
+                        <h3>Country: </h3>
                         <p>{users?.country}</p>
                         <h3>City:</h3>
                         <p>{users?.city}</p>
+                    </div>
+                    <div className='container '>
                         <h3>State:</h3>
                         <p>{users?.state}</p>
                         <h3>Address:</h3>
                         <p>{users?.address}</p>
+                    </div>
                 </div>
             </div>
         </div>
