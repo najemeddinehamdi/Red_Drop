@@ -56,11 +56,11 @@ module.exports = {
     },
 
     //?==========Read ALL==========
-    Allusers: (req, res) => {
+    AllUsers: (req, res) => {
         User.find()
-            .then((Allusers) => {
-                console.log(Allusers);
-                res.status(200).json(Allusers);
+            .then((allUsers) => { 
+                console.log(allUsers); 
+                res.status(200).json(allUsers); 
             })
             .catch((err) => {
                 res.status(400).json(err);
