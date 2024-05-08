@@ -83,7 +83,7 @@ export const User = () => {
                             <h2>Donation History:</h2>
                             <table>
                                 <thead>
-                                    <tr>Donation date: Wednesday, Apr 24, 2024</tr>
+                                    <th>Donation date: Wednesday, Apr 24, 2024</th>
                                 </thead>
                                 <tbody>
                                     <td>Donation Type: blood</td>
@@ -104,7 +104,7 @@ export const User = () => {
         </div>
       )}
        {infoToShow === 'donnerCard' && (
-        <div className='donner-card-info' >
+        <div className='cart-info' >
           <h2>Donation</h2>
           <h6>first name</h6>
           <h6>last name</h6>
