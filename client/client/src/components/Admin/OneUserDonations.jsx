@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
+import Moment from 'react-moment';
 
 
 const OneUserDonations = () => {
@@ -36,14 +37,18 @@ const OneUserDonations = () => {
         <div>
             {donations.map((donation) => {
                     return (
-                        <div key={donation._id} className="card mb-3" >
+                        <div key={donation._id} className="card mb-3">
                             <div className="card-body">
-                                <h5 className="card-title text-center" style={style}>{donation.donationDate}</h5>
+                                <h5 className="card-title text-center" style={style}>
+                                    <Moment format="MMMM Do YYYY">{donation.donationDate}</Moment>
+                                </h5>
                                 <div className="d-flex justify-content-evenly">
                                     <div>
                                         <div>
                                             <h6 className="text-muted">Donation Type:</h6>
-                                            <p className="text-center">{donation.donationType}</p>
+                                            <p className="text-center">
+                                                {donation.donationType}
+                                            </p>
                                         </div>
                                         <div>
                                             <h6 className="card-subtitle mb-2 text-muted">Bleeding Time:</h6>
@@ -63,7 +68,7 @@ const OneUserDonations = () => {
                                 </div>
                             </div>
                         </div>
-                            )
+                    );
                             })
             }
         </div>

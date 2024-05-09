@@ -5,7 +5,8 @@ import { useParams } from 'react-router-dom'
 import NavbarAdmin from './NavbarAdmin';
 
 
-const AllUsers=() =>{
+
+const Sponsor=() =>{
 
     const [sponsors, setSponsor] = useState([]);
 
@@ -36,12 +37,12 @@ const AllUsers=() =>{
       <div className='container'>
         <div className="row">
           <NavbarAdmin />
+          <Link to="/admin/sponsor/add" className='btn btn-primary'>Add Sponsor</Link>
           <div>
             <table className="table table-striped">
                 <thead>
                     <tr>
                         <th>Name</th>
-                        <th>Banner</th>
                         <th>Delete</th>
                     </tr>
                 </thead>
@@ -53,8 +54,10 @@ const AllUsers=() =>{
                                     {sponsor.sponsorName}
                                 </Link>
                             </td>
-                            <td>{sponsor.banner}</td>
-                            <td><button className='btn btn-danger' onClick={()=>deleteSponsor(sponsor._id)}>delete</button></td>
+                            <td>
+                                <button className='btn btn-danger' onClick={()=>deleteSponsor(sponsor._id)}>delete</button>
+                            
+                            </td>
                         </tr>
                     ))}
                 </tbody>
@@ -65,4 +68,4 @@ const AllUsers=() =>{
     )
 }
 
-export default AllUsers
+export default Sponsor

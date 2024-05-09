@@ -64,7 +64,7 @@ module.exports = {
 
 //? get all products with sponsor id
     AllSponsorProduct: (req, res) => {
-        Product.find({sponsorId:req.params.id})
+        Product.find({idSponsor:req.params.id})
             .then((AllProduct) => {
                 console.log(AllProduct);
                 res.status(200).json(AllProduct);
@@ -76,7 +76,7 @@ module.exports = {
 
 // add product with user id and add user id to req.body
         addProduct: (req, res) => {
-            req.body.sponsorId = req.params.id;
+            req.body.idSponsor = req.params.id;
             Product.create(req.body)
                 .then((CreatedProduct) => {
                         console.log(CreatedProduct)

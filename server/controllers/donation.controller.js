@@ -2,15 +2,15 @@ const Donation = require('../models/donation.model');
 
 module.exports = {
     //?==========Create==========
-    // CreateDonation: (req, res) => {
-    //     Donation.create(req.body)
-    //         .then((CreatedDonation) => {
-    //             console.log(CreatedDonation)
-    //             res.status(200).json(CreatedDonation)
-    //         }).catch((err) => {
-    //             res.status(400).json(err)
-    //         })
-    // },
+    CreateDonation: (req, res) => {
+        Donation.create(req.body)
+            .then((CreatedDonation) => {
+                console.log(CreatedDonation)
+                res.status(200).json(CreatedDonation)
+            }).catch((err) => {
+                res.status(400).json(err)
+            })
+    },
     //?==========Read ALL==========
     AllDonation: (req, res) => {
         Donation.find()

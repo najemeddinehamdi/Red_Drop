@@ -37,6 +37,11 @@ const UserSchema = new mongoose.Schema({
         type: String,
         minLength: [8, "{PATH} must have at least 8 chars"],    
     },
+    bloodGroup: {   
+        type: String,
+        required: [true, "{PATH} is required"],
+        minLength: [2, "{PATH} must have at least 2 chars"]
+    },
     contactInfo: {
         country: {
             type: String,

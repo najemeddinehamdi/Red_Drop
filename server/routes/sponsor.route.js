@@ -6,7 +6,7 @@ module.exports = (app) => {
     //? =========== READ ONE ==========
     app.get('/api/sponsor/:id', sponsorControllers.findOneSponsor);
     //? =========== CREATE ==========
-    app.post('/api/sponsor', sponsorControllers.CreateSponsor);
+    app.post('/api/sponsor/new', sponsorControllers.CreateSponsor);
     //? =========== UPDATE ==========
     app.patch('/api/sponsor/:id', sponsorControllers.updateExistingSponsor);
     //? =========== DELETE ==========

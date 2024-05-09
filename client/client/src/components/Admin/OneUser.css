@@ -7,7 +7,7 @@ p::before{
     content: "•";
 }
 
-.text-center{
+.Userinfo{
     padding-left:115px;
 }
 
@@ -17,4 +17,10 @@ p::before{
 
 h3{
     font-weight: bold;
+}
+
+.donation{
+    height: 48rem;
+    overflow: scroll;
+
 }

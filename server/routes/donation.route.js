@@ -6,7 +6,7 @@ module.exports = (app) => {
     //? =========== READ ONE ==========
     app.get('/api/donation/:id', donationController.findOneDonation);
     //? =========== CREATE ==========
-    // app.post('/api/donation', donationController.CreateDonation);
+    app.post('/api/donation/new', donationController.CreateDonation);
     //? =========== UPDATE ==========
     app.patch('/api/donation/:id', donationController.updateExistingDonation);
     //? =========== DELETE ==========

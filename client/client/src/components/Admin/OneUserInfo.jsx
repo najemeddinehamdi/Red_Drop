@@ -39,9 +39,9 @@ const OneUserInfo = () => {
                         <h3>Email: </h3>
                         <p>{users?.email}</p>
                         <h3>Phone: </h3>
-                        <p>{users?.phone}</p>
+                        <p>{users?.phoneNumber}</p>
                         <h3>Occupation: </h3>
-                        <p>{users?.occupation}</p>
+                        <p>{users?.Occupation}</p>
                     </div>
                     <div>
                         <h3>nbrDonation: </h3>
@@ -51,22 +51,22 @@ const OneUserInfo = () => {
                         <h3>Rewards Points:</h3>
                         <p>{users?.rewardsPoints}</p>
                         <h3>Status: </h3>
-                        <p>{users?.status}</p>
+                        <p>{users?.Status}</p>
                     </div>
                 </div>
                 <h2 className='ContactInfo'>Contact Info</h2>
                 <div className='d-flex gap-5'>
                     <div className='container '>
                         <h3>Country: </h3>
-                        <p>{users?.country}</p>
+                        <p>{users?.contactInfo.country}</p>
                         <h3>City:</h3>
-                        <p>{users?.city}</p>
+                        <p>{users?.contactInfo.city}</p>
                     </div>
                     <div className='container '>
-                        <h3>State:</h3>
-                        <p>{users?.state}</p>
+                        <h3>department:</h3>
+                        <p>{users?.contactInfo.department}</p>
                         <h3>Address:</h3>
-                        <p>{users?.address}</p>
+                        <p>{users?.contactInfo.address}</p>
                     </div>
                 </div>
             </div>
