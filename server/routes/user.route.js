@@ -16,9 +16,13 @@ module.exports = (app) => {
         // be sure to preface the id variable with a `:` colon
         app.get("/api/signup/:id", UserController.findOneSingleUser);
 
+
         //   //?==========Update Data==========
         app.patch("/api/signup/:id", UserController.updateExistingUser);
 
         //   //?==========Deleting Data==========
         app.delete("/api/signup/:id", UserController.deleteAnExistingUser);
+
+        
 };
+

@@ -7,10 +7,13 @@ import Up from './components/SignIn';
 import Map from './components/Map';
 import Quiz from './components/Quiz';
 import User from './components/User';
-import Statistcs from './components/statistcs';
+import Market from './components/market/MarketPlace'
+
 import AdminDashboard from './components/Admin/AdminDashboard';
 import OneUser from './components/Admin/OneUser';
 import Sponsor from './components/Admin/Sponsor';
+import Sponsors from './components/market/Sponsors';
+
 
 
 
@@ -25,10 +28,11 @@ function App() {
       <Route path="/map" element={<Map />} />
       <Route path="/quiz" element={<Quiz />} />
       <Route path="/user" element={<User />} />
-      <Route path="/s" element={<Statistcs />} />
       <Route path="/admin" element={<AdminDashboard />} />
       <Route path="/admin/user/:id" element={<OneUser />} />
       <Route path="/admin/sponsor" element={<Sponsor />} />
+      <Route path="/user/market" element={<Market />} />
+      <Route path="/user/sponsor" element={<Sponsors />} />
       
       </Routes>
     </div>

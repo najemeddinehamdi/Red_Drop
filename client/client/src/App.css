@@ -311,17 +311,7 @@
   .p-main{
     color: white;
   }
-  p{
-    font-size: 1.4rem;
-    font-family: 'Roboto', sans-serif; 
-    margin-bottom: 10px;
-    text-align: center;
-    padding-top:10%;
-  }
-  p::before {
-    content: "•"; 
-    margin-right: 7px; 
-  }
+
 
   iframe{
     width: 100%;
@@ -433,11 +423,7 @@
   }
 
 
-  p {
-    
-    font-size: 1.5rem;
-    color: red;
-  }
+
 
 
   .modal {
@@ -557,21 +543,8 @@
   }
 
 
-  .center {
-    padding: 10px;
-    margin: 10px;
-    border: 1px solid #9a9898;
-    border-radius: 10px;
-    max-width:100%;
-    max-height: 100%;
-    
-  }
-  .blood-donation-centers {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 50vh;
-  }
+ 
+ 
 
   .map-p{
     display: flex;
@@ -608,9 +581,8 @@
     color: #000;
   }
   .manage{
-    width: 87px ;
-    height: 80px;
-    padding: 4px;
+    width: 70px;
+    padding-left:10px;
   }
   .Acc-manage{
     display: flex;
@@ -631,7 +603,7 @@
   .table-a {
     display: flex;
     justify-content: space-between;
-    background-color:#4ab8a49f;
+    background-color:#cad0d7;
     border-radius: 20px;
     padding: 10px;
 
@@ -681,9 +653,8 @@
 }
 .element-item{
   padding : 33px;
-  text-align: center;
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: bold;
   color: white;
@@ -836,20 +807,23 @@ max-height: 350px;
   justify-content: space-between; 
 }
 
-p{
+/* // all the fucking p */
 
-  font-size: 1.1rem;
 
+.pop {
+  
+  font-size: 1.5rem;
+  color: red;
+  text-align: center;
+}
+.p-main{
   font-size: 1.4rem;
   font-family: 'Roboto', sans-serif; 
   margin-bottom: 10px;
-  text-align: start;
-
+  text-align: center;
+  padding-top:10%;
 }
-/* p::before {
-  content: "•"; 
-  margin-right: 7px; 
-} */
+
 
 iframe{
   width: 100%;
@@ -883,6 +857,13 @@ iframe{
 .btn-s{
   border-radius: 10px;
 }
+.btn-c{
+  align-items: center;
+  display: flex;
+  text-align: center;
+  gap: 10px;
+}
+
 
 .quiz-container {
   max-width: 600px;
@@ -960,12 +941,6 @@ button:hover {
   background-color: #3a907c;
 }
 
-
-/* p {
-  
-  font-size: 1.5rem;
-  color: red;
-} */
 
 
 .modal {
@@ -1120,12 +1095,13 @@ button:hover {
   .cart-info{
     align-self: center;
     margin: 0 auto;
-    width: 350px;
-    height: 200px;
+    width: 450px;
+    height: 250px;
     background-color: white;
     border-radius: 10px;
     border-top: 8px solid;
     border-image: linear-gradient(to right, #520200 25%, #FF0700 25%, #FF0700 50%, #4AB8A4 50%, #4AB8A4 75%, #246358 75%) 1;
+    padding: 30px;
   }
 
   
@@ -1154,3 +1130,45 @@ button:hover {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+.reward-img{
+  max-height: 180PX;
+  
+}
+.rewards-points-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.all1{
+  display: flex;
+  justify-content: space-around;
+}
+ .red{
+  border-radius: 10px;
+ }
+
+ .stock{
+  width: 100%;
+ }
+ .next{
+  text-align: center;
+  color: #4AB8A4;
+ }
+
+ .hale {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.banner-1 {
+  width: 90%; 
+  height: 200px;
+}
+
+
+
+

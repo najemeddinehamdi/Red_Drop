@@ -43,7 +43,7 @@ const Main = () => {
                     <h2 className='h-body'>Why donate ?</h2>
                     <div className="information">
                         <p className='p-main'>Your donation changes lives, bringing hope where it's needed most. Join us in making a difference today.</p>
-                        <Link className='link' to={"/quiz"}>Book Now</Link>
+                        <Link className='link' to={"/quiz"}>Take The Quiz</Link>
                     </div>
                 </div>
                 <div className='c' id='c2'>
@@ -51,7 +51,7 @@ const Main = () => {
                     <h2 className='h-body'>Blood Type</h2>
                     <div className="information">
                         <p className='p-main'>Blood type (A, B, AB, or O) guides safe transfusions and transplants, crucial for medical procedures, ensuring effective healthcare. </p>
-                        <Link className='link' to={"/quiz"}>Book Now</Link>
+                        <Link className='link' to={"/quiz"}>Take The Quiz</Link>
                     </div>
                 </div>
                 <div className='c' id='c3'>
@@ -59,7 +59,7 @@ const Main = () => {
                     <h2 className='h-body'>Donation Process</h2>
                     <div className="information">
                         <p className='p-main'>The donation process comprises registration, medical review, a brief physical, and the donation, usually taking 10-15 minutes.</p>
-                        <Link className='link' to={"/quiz"}>Book Now</Link>
+                        <Link className='link' to={"/quiz"}>Take The Quiz</Link>
                     </div>
                 </div>
                 <div className='c' id='c4'>
@@ -67,13 +67,13 @@ const Main = () => {
                     <h2 className='h-body'>Impact of Your Donation</h2>
                     <div className="information">
                         <p className='p-main'>Donations profoundly impact healthcare, saving lives and providing essential resources for medical treatments and emergencies.</p>
-                        <Link className='link' to={"/quiz"}>Book Now</Link>
+                        <Link className='link' to={"/quiz"}>Take The Quiz</Link>
                     </div>
                 </div>
             </div>
             {isModalOpen && <Up onClose={closeModal} />} {/* Render the Up (SignIn) component as a modal */}
             {isSignUpModalOpen && <Sign onClose={closeSignUpModal} />} {/* Render the Sign Up modal */}
-            <div className='blood-inventory'></div>
+            <img className='stock' src="stock.png" alt="" />
         </div>
     )
 }
